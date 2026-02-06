@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wikigpt-es"
+version = "0.1.0"
+description = "Chatbot de videojuegos basado en Wikipedia en español."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "WikiGPT-ES" }]
+
+[project.scripts]
+wikigpt-train = "wikigpt_es.train:main"
+wikigpt-cli = "wikigpt_es.cli:main"
+wikigpt-gui = "wikigpt_es.gui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wikigpt_es"]
